@@ -10,8 +10,8 @@ func TestStringSearch(t *testing.T) {
 		pattern      string
 		text         string
 		ignoreCase   bool
-		wantAll      []int // 기대되는 모든 매칭 위치
-		wantFirst    int   // 기대되는 첫 매칭 위치
+		wantAll      []int
+		wantFirst    int
 		wantContains bool
 		wantCount    int
 	}{
@@ -104,7 +104,6 @@ func TestStringSearch(t *testing.T) {
 	}
 }
 
-// 바이트 슬라이스 검색(Test for FindAllBytes, FindFirstBytes, ContainsBytes, CountBytes)
 func TestByteSearch(t *testing.T) {
 	tests := []struct {
 		name         string
